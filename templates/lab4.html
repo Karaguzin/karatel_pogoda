@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+ 
+{% block content %}
+{{ super() }}
+<p>Нейрон для определения погоды
+<form action="/p_lab4" method="POST">
+    <p><input type="text" class="form_text" name="temperature"> Температура (°C)</p>
+    <p><input name="humidity" class="form_text" type="text"> Влажность (%)</p>
+    <p><input name="wind_speed" class="form_text" type="text"> Скорость ветра (м/с)</p>
+    <input type="submit" class="form_btn" value="Узнать погоду">
+    <h1>{{class_model}}</h1>
+    </p>
+</form>
+
+{% endblock %}
